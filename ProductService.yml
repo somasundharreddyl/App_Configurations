@@ -1,0 +1,34 @@
+server:
+  port: 9005
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Password@123
+    url: jdbc:mysql://localhost:3306/ecommerce?createDatabaseIfNotExist=true&autoReconnect=true
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+products:  
+ props:
+  productcreation: product created successfully
+  productretrieve: product Retrieved Successfully 
+  productsretrieve: All products Retrieved Successfully
+  productupdate: product Updated Successfully.
+  productdelete: product Deleted Successfully.
+  categorycreation: category created successfully
+  categoryretrieve: category Retrieved Successfully 
+  categoriesretrieve: All category Retrieved Successfully
+  categoryupdate: category Updated Successfully.
+  categorydelete: category Deleted Successfully.   
+  categorynotfound : category Not Found with Id-
+  productnotfound : Product Not Found with Id-    
