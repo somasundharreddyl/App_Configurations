@@ -1,1 +1,27 @@
-
+server:
+  port: 9006
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Password@123
+    url: jdbc:mysql://localhost:3306/ecommerce?createDatabaseIfNotExist=true&autoReconnect=true
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+cart:  
+ props:
+  cartcreation: cart created successfully
+  cartretrieve: cart Retrieved Successfully 
+  cartupdate: cart Updated Successfully.
+  cartdelete: cart Deleted Successfully.
+  cartnotfound : cart Not Found with Id
